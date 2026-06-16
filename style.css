@@ -1,0 +1,220 @@
+/* 🎨 গ্লোবাল স্টাইল এবং ডার্ক হ্যাকিং থিম */
+body {
+    background-color: #050b11;
+    color: #e0e6ed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 📢 স্লো টিক্কার এবং মাউস নিলে পজ হওয়ার ইফেক্ট */
+.update-ticker {
+    background: #000;
+    border-bottom: 2px solid #00ff33;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 12px 0;
+    box-shadow: 0 0 15px rgba(0, 255, 51, 0.2);
+}
+
+.ticker-wrap {
+    display: inline-block;
+    padding-left: 100%;
+    animation: ticker-slow 28s linear infinite;
+}
+
+@keyframes ticker-slow {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+
+/* মাউস পয়েন্টার উপরে নিলে সোয়াইপ বন্ধ হবে */
+.update-ticker:hover .ticker-wrap {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+.ticker-item {
+    display: inline-block;
+    padding: 0 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff33;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00ff33;
+}
+
+/* 📦 কার্ড কন্টেইনার ডিজাইন */
+.card-container {
+    max-width: 450px;
+    margin: 40px auto;
+    background: #0b141d;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #1a2f40;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+h2 {
+    text-align: center;
+    color: #00ffcc;
+    margin-top: 0;
+}
+
+.subtitle {
+    text-align: center;
+    color: #88a0b5;
+    font-size: 14px;
+}
+
+/* 👤 প্রোফাইল হেডার */
+.user-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    background: #101f2c;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #00ff33;
+}
+
+#userAvatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: none;
+    border: 2px solid #00ff33;
+}
+
+#welcomeMessage {
+    margin: 0;
+    font-size: 16px;
+    color: #00ff33;
+    font-family: 'Courier New', monospace;
+}
+
+/* 📋 ফর্ম কম্পোনেন্টস */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #88a0b5;
+}
+
+input[type="text"], input[type="password"], input[type="number"], textarea {
+    width: 100%;
+    padding: 12px;
+    background: #070f15;
+    border: 1px solid #1a2f40;
+    border-radius: 4px;
+    color: #fff;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus {
+    border-color: #00ffcc;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 255, 204, 0.3);
+}
+
+textarea {
+    resize: none;
+    font-family: monospace;
+    background: #02060a;
+    color: #00ff33;
+    border: 1px solid #005522;
+}
+
+/* 🔘 বাটন্স */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: #00ffcc;
+    color: #050b11;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #00b399;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.btn-secondary {
+    width: 100%;
+    padding: 12px;
+    background: #1a2f40;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 💻 হ্যাকিং ওটিপি বক্স স্টাইল */
+.otp-box {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px dashed #00ff33;
+}
+
+.otp-box h3 {
+    color: #00ff33;
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-hack {
+    width: 100%;
+    padding: 12px;
+    background: #00ff33;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 0 10px rgba(0, 255, 51, 0.4);
+}
+
+#otpDisplayBox {
+    margin-top: 15px;
+    padding: 12px;
+    background: #000;
+    border: 1px solid #003311;
+    min-height: 50px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#otpStatusText {
+    color: #888;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+#finalOtpText {
+    color: #00ff33;
+    font-family: 'Courier New', monospace;
+    font-size: 38px;
+    margin: 5px 0;
+    display: none;
+    text-shadow: 0 0 15px #00ff33;
+}
+
+/* Pop-in Animation */
+.wow-pop-in {
+    animation: popIn 0.4s ease-out forwards;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
